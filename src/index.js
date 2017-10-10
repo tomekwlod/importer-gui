@@ -35,8 +35,7 @@ class App extends Component {
         }
 
         axios
-            // .post(`http://127.0.0.1:4444/trials`, {
-            .post(`http://188.166.148.152:4444/trials`, {
+            .post(`http://127.0.0.1:4444/search`, {
                 "keyword" : searchTerm,
                 "mesh" : (this.state.selectedFilters['Mesh Terms']) ? this.state.selectedFilters['Mesh Terms'] : [],
                 "experts" : (this.state.selectedFilters['Experts']) ? this.state.selectedFilters['Experts'] : [],
@@ -57,8 +56,7 @@ class App extends Component {
 
     dataFilters(searchTerm) {
         axios
-            .post(`http://188.166.148.152:4444/trials/filters`, {
-            // .post(`http://127.0.0.1:4444/trials/filters`, {
+            .post(`http://127.0.0.1:4444/search/filters`, {
                 "keyword" : searchTerm,
                 "mesh" : (this.state.selectedFilters['Mesh Terms']) ? this.state.selectedFilters['Mesh Terms'] : [],
                 "experts" : (this.state.selectedFilters['Experts']) ? this.state.selectedFilters['Experts'] : [],
@@ -95,7 +93,9 @@ class App extends Component {
 
         return (
             <div>
-                <SearchBar onSearchTermChange={this.dataSearch} />
+                <SearchBar onSubmit={this.dataSearch} />
+                {/*<SearchBar onSubmit={term => this.dataSearch(term)} />*/}
+
                 <div className="content">
                     <FilterList 
                         filters={this.state.filters}

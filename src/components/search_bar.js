@@ -10,18 +10,33 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="search-bar">
-                <span>Any keyword: &emsp;</span> 
-                <input 
-                    value={this.state.term}
-                    onChange={event => this.onInputChange(event.target.value)} />
+            <div className="search-bar form-horizontal">
+                <div className="col-md-10 form-group">
+                    <label className="col-sm-4 control-label">Any keyword:</label>
+                    <div className="col-sm-8">
+                        <input
+                            className="form-control"
+                            type="text"
+                            value={this.state.term}
+                            onChange={event => this.onInputChange(event.target.value)} 
+                        />
+                    </div>
+                </div>
+                <div className="col-md-2 form-group">
+                    <input 
+                        className="btn btn-default" 
+                        type="button" 
+                        value="Search"
+                        onClick={event => this.props.onSubmit(this.state.term)} 
+                    />
+                </div>
             </div>
         );
     }
 
     onInputChange(term) {
          this.setState({term})
-         this.props.onSearchTermChange(term)
+        //  this.props.onSearchTermChange(term)
     }
 }
 
