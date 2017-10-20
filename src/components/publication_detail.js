@@ -36,8 +36,8 @@ const PublicationDetail = ({item}) => {
                 <div>
                     <b>Experts:</b>
                     <ul>
-                    {item.AuthorList != null && item.AuthorList.map((item, index) => (
-                        <li key={index}>{item.ForeName} {item.LastName} {item.Initials} | <i>{item.Affiliation}</i></li>
+                    {item.Experts != null && item.Experts.map((item, index) => (
+                        <li key={index}>{item.LastName} | {item.Placeholder} | {item.Role}</li>
                     ))}
                     </ul>
                 </div>
