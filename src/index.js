@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom'
 
-import Routing from './Routing'
+import Routing from './components/Routing'
 
 class App extends Component {
     render() {

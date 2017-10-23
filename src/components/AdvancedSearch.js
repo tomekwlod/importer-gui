@@ -23,13 +23,14 @@ export default ({
             </div>
             <div className="col-md-2 form-group">
                 <input 
-                    className="btn btn-default" 
+                    className="btn btn-success" 
                     type="button" 
                     value="Search"
                     onClick={() => onSubmit()} 
                 />
             </div>
         </div>
+
         <div className="search-bar">
             {
                 mesh.map((mt, key) => (

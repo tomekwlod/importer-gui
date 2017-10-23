@@ -22,7 +22,7 @@ const Routing = () => (
                         <li><Link to="/">About</Link></li>
                     </ul>
 
-                    <p className="navbar-text navbar-right">Proof of concept</p>
+                    <p className="navbar-text navbar-right">2017 Proof of concept</p>
                 </div>
             </div>
         </nav>

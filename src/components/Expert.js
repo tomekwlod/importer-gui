@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-import {fetchExpertsList} from './api'
-import AdvancedSearch from './components/AdvancedSearch'
-import ExpertList from './components/ExpertList'
+import {fetchExpertsList} from '../api'
+import AdvancedSearch from './AdvancedSearch'
+import ExpertList from './ExpertList'
 
 class Expert extends Component {
     constructor(...args) {

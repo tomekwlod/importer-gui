@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-import {fetchList, fetchFilters} from './api'
-import AdvancedSearch from './components/AdvancedSearch'
-import List from './components/List'
-import TrialDetail from './components/TrialDetail'
-import PublicationDetail from './components/PublicationDetail'
-import FilterList from './components/FilterList'
+import {fetchList, fetchFilters} from '../api'
+import AdvancedSearch from './AdvancedSearch'
+import List from './List'
+import TrialDetail from './TrialDetail'
+import PublicationDetail from './PublicationDetail'
+import FilterList from './FilterList'
 
 class Home extends Component {
     constructor(...args) {
