@@ -5,8 +5,8 @@ import {
     Link
 } from 'react-router-dom'
 
-import Home from './home'
-import Expert from './expert'
+import Home from './Home'
+import Expert from './Expert'
 
 const Routing = () => (
     <div>

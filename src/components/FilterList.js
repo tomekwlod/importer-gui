@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterListGroup from './filter_list_group';
+import FilterListGroup from './FilterListGroup';
 
 const FilterList = ({ filters, onFilterSelect, selectedFilters }) => (
     <div className="filters-groups col-md-4">

@@ -1,5 +1,5 @@
 import React from 'react';
-import ExpertListItem from './expert_list_item';
+import ExpertListItem from './ExpertListItem';
 
 const ExpertList = ({ data, paginator, onItemSelect, selectedItem}) => {
     if (!paginator.total) {

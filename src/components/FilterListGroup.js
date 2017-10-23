@@ -1,5 +1,5 @@
 import React from 'react';
-import FilterListItem from './filter_list_item';
+import FilterListItem from './FilterListItem';
 
 const FilterListGroup = (props) => {
     if (props.filter.data == null) {
