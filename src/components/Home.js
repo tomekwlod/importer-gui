@@ -19,6 +19,7 @@ class Home extends Component {
             selectedItem: {},
             selectedFilters: [],
             keyword:"",
+            drug: "",
             mesh:[""],
         };
     }
@@ -26,6 +27,12 @@ class Home extends Component {
     onChangeKeyword = keyword => {
         this.setState({
             keyword: keyword
+        });
+    }
+
+    onChangeDrug = drug => {
+        this.setState({
+            drug: drug
         });
     }
 
@@ -99,6 +106,7 @@ class Home extends Component {
                     // keyword={this.state.keyword}
                     {...this.state}
                     onChangeKeyword={this.onChangeKeyword}
+                    onChangeDrug={this.onChangeDrug}
                     onMeshTermChange={this.onMeshTermChange}
                     onSubmit={this.onSubmit}
                     tmpl="home"

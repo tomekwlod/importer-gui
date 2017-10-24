@@ -12,14 +12,21 @@ class Expert extends Component {
         this.state = {
             data: [],
             paginator: {},
-            keyword:"",
-            mesh:[""],
+            keyword: "",
+            drug: "",
+            mesh: [""],
         };
     }
 
     onChangeKeyword = keyword => {
         this.setState({
             keyword: keyword
+        });
+    }
+
+    onChangeDrug = drug => {
+        this.setState({
+            drug: drug
         });
     }
 
@@ -61,6 +68,7 @@ class Expert extends Component {
                     // keyword={this.state.keyword}
                     {...this.state}
                     onChangeKeyword={this.onChangeKeyword}
+                    onChangeDrug={this.onChangeDrug}
                     onMeshTermChange={this.onMeshTermChange}
                     onSubmit={this.onSubmit}
                     tmpl="experts"

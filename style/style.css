@@ -1,14 +1,9 @@
-.search-bar {
-    margin: 20px 0;
+.advanced-search {
+    /*margin: 20px 0;*/
     text-align: center;
 }
-
-.search-bar input {
+.advanced-search input {
     width: 100%;
-}
-
-.item img {
-    max-width: 64px;
 }
 
 .item-detail .details {
