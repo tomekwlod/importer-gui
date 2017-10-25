@@ -3,10 +3,17 @@ import React, {Component} from 'react'
 export default ({
     onChangeKeyword,
     onChangeDrug,
-    onSubmit,
+    onChangeCountry,
+    onChangeFrom,
+    onChangeTo,
+    onChangeStatus,
+    onChangePhase,
+    onChangeJournal,
     onMeshTermChange,
+    onSubmit,
     keyword,
     drug,
+    country,
     mesh,
     tmpl
 }) => (
@@ -27,15 +34,42 @@ export default ({
 
         <div className="col-md-12">
             <div className="col-md-10 form-group">
-                <label className="col-sm-4 control-label">Drug:</label>
+                <label className="col-sm-4 control-label">Country:</label>
                 <div className="col-sm-8">
                     <input
                         className="form-control input-sm"
                         type="text"
-                        onChange={e => onChangeDrug(e.target.value)} 
+                        onChange={e => onChangeCountry(e.target.value)} 
                     />
                 </div>
             </div>
+        </div>
+
+        <div className="col-md-12">
+            <div className="col-md-10 pull-right">
+                <div className="col-md-5 form-group">
+                    <label className="col-sm-4 control-label">From:</label>
+                    <div className="col-sm-8">
+                        <input
+                            className="form-control input-sm"
+                            type="text"
+                            placeholder="Greated than or equal"
+                            onChange={e => onChangeFrom(e.target.value)} 
+                        />
+                    </div>
+                </div>
+                <div className="col-md-5 form-group">
+                    <label className="col-sm-4 control-label">To:</label>
+                    <div className="col-sm-8">
+                        <input
+                            className="form-control input-sm"
+                            type="text"
+                            placeholder="Lower than or equal"
+                            onChange={e => onChangeTo(e.target.value)} 
+                        />
+                    </div>
+                </div>
+                </div>
         </div>
 
         <div className="col-md-12">
@@ -62,6 +96,58 @@ export default ({
                     value="OR"
                     onClick={() => onMeshTermChange(null, '')} 
                 />
+            </div>
+        </div>
+
+        <div className="col-md-12">
+            <div className="col-md-10 form-group">
+                <label className="col-sm-4 control-label">Drug:</label>
+                <div className="col-sm-8">
+                    <input
+                        className="form-control input-sm"
+                        type="text"
+                        onChange={e => onChangeDrug(e.target.value)} 
+                    />
+                </div>
+            </div>
+        </div>
+
+         <div className="col-md-12">
+            <div className="col-md-10 form-group">
+                <label className="col-sm-4 control-label">Status:</label>
+                <div className="col-sm-8">
+                    <input
+                        className="form-control input-sm"
+                        type="text"
+                        onChange={e => onChangeStatus(e.target.value)} 
+                    />
+                </div>
+            </div>
+        </div>
+
+         <div className="col-md-12">
+            <div className="col-md-10 form-group">
+                <label className="col-sm-4 control-label">Phase:</label>
+                <div className="col-sm-8">
+                    <input
+                        className="form-control input-sm"
+                        type="text"
+                        onChange={e => onChangePhase(e.target.value)} 
+                    />
+                </div>
+            </div>
+        </div>
+
+         <div className="col-md-12">
+            <div className="col-md-10 form-group">
+                <label className="col-sm-4 control-label">Journal:</label>
+                <div className="col-sm-8">
+                    <input
+                        className="form-control input-sm"
+                        type="text"
+                        onChange={e => onChangeJournal(e.target.value)} 
+                    />
+                </div>
             </div>
         </div>
 

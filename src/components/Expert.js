@@ -14,7 +14,13 @@ class Expert extends Component {
             paginator: {},
             keyword: "",
             drug: "",
+            country: "",
             mesh: [""],
+            dateTo: "",
+            dateFrom: "",
+            status: "",
+            phase: "",
+            journal: "",
         };
     }
 
@@ -23,13 +29,41 @@ class Expert extends Component {
             keyword: keyword
         });
     }
-
     onChangeDrug = drug => {
         this.setState({
             drug: drug
         });
     }
-
+    onChangeCountry = country => {
+        this.setState({
+            country: country
+        });
+    }
+    onChangeFrom = dateFrom => {
+        this.setState({
+            dateFrom: dateFrom
+        });
+    }
+    onChangeTo = dateTo => {
+        this.setState({
+            dateTo: dateTo
+        });
+    }
+    onChangeStatus = status => {
+        this.setState({
+            status: status
+        });
+    }
+    onChangePhase = phase => {
+        this.setState({
+            phase: phase
+        });
+    }
+    onChangeJournal = journal => {
+        this.setState({
+            journal: journal
+        });
+    }
     onMeshTermChange = (key, value) => {
         var mesh = this.state.mesh.concat([]);
 
@@ -69,6 +103,12 @@ class Expert extends Component {
                     {...this.state}
                     onChangeKeyword={this.onChangeKeyword}
                     onChangeDrug={this.onChangeDrug}
+                    onChangeCountry={this.onChangeCountry}
+                    onChangeFrom={this.onChangeFrom}
+                    onChangeTo={this.onChangeTo}
+                    onChangeStatus={this.onChangeStatus}
+                    onChangePhase={this.onChangePhase}
+                    onChangeJournal={this.onChangeJournal}
                     onMeshTermChange={this.onMeshTermChange}
                     onSubmit={this.onSubmit}
                     tmpl="experts"
